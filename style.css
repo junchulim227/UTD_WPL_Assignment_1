@@ -1,0 +1,83 @@
+body
+{
+	margin:10px;
+}
+
+.sec1 .row
+{
+	padding-left: 20px;
+
+}
+
+.sec1
+{
+	margin:20px;
+	
+}
+.blue-background {
+  background-color: blue;
+}
+
+/*.light, .light div
+{
+	background-color: beige;
+	color:black;
+	border: black solid 0.5px;
+}
+*/
+
+ .ic
+{
+	float: right;
+}
+
+.dark
+{
+	margin:20px;
+}
+.dark, .dark>div {
+  background-color: black;
+  color: white;
+  border: white solid 0.5px;
+  
+}
+
+.dark .row
+{
+	padding-left: 20px;
+}
+
+.sec1, .sec1>div
+{
+	border: black solid 0.5px;
+}
+.sec1  .col-8  
+{
+	background-color: purple;
+	color:white;
+	
+}
+
+.sec1 .col-4
+{
+	background-color:yellow;
+	color:black;
+}
+
+.sec1 > .col-2
+{
+	background-color:lightgrey;
+}
+
+.sec1 .col-2.d1
+{
+	background-color:lightblue;
+}
+
+.sec1 > .col-8
+{
+	background-color: lightgreen;
+	color:black;
+}
+
+

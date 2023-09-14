@@ -64,45 +64,13 @@
 </nav>
 
 
-<h2 style="padding-left: 120px">
-
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
     
-    
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home </a>
-            </li>
-            
 
-
-            <li class="nav-item">
-              <a class="nav-link" href="#">Games</a>
-            </li>
-            
-
-            <li class="nav-item">
-                <a class="nav-link" href="#">Online</a>
-              </li>
-              
-            
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Meme it</a>
-            </li>
-          </ul>
-          
-        </div>
-      </nav>
-
-</h2>
 
 
 <div class="row">
 
-    <div class = "col-2">
+    <div class = "col-2" style="margin-top: 110px;">
         <ul class="list-group">
             <li class="list-group-item" style="background-color:darkcyan; color: white;">Similar Games</li>
             <li class="list-group-item">Doodle</li>
@@ -121,7 +89,7 @@
     </div>
 
 
-    <div class="col-10">
+    <div class="col-10" style="margin-top: 30px;">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
     
     
@@ -154,26 +122,52 @@
 
 
 
-        <div class="row">
+          <div class="row">
 
-        <div class ="col-7">
-
-          <li class="list-group-item">Meme It</li>
-          <img src="/A1/img/no.png" alt="No" style="width: 250px; height:250px">
-          <img src="/A1/img/yes.png" alt="Yes" style="width: 250px; height:250px">
-
-          </div>
-            
-        <div class="col-4" style="background-color:purple;color:white">
-          <b>How to play</b>
-          ----------------------------
-          Enter the text into the input fields and generate your custom meme!
-            
-          </div>
+            <div class="col-7" style="border: 2px solid whitesmoke; margin-top: 20px; margin-left:10px; margin-right: 10px;">
+                <li class="list-group-item" style="border: 2px solid whitesmoke; margin-top: 20px; margin-bottom: 20px; font-weight: bold; font-size: 1.5em; padding: 0.25em 0.5em; display: inline-block;">Meme It</li>
+                <div style="display: flex; margin-top: 20px;">
+                    <div>
+                        <img src="/A1/img/no.png" alt="No" style="width: 250px; height:250px;">
+                        <p id="noText" style="text-align: center; width: 250px; background-color: darkcyan; color: white; font-style: italic; font-weight: bold;"></p> 
+                    </div>
+                    <div style="margin-left: 10px;">
+                        <img src="/A1/img/yes.png" alt="Yes" style="width: 250px; height:250px;">
+                        <p id="yesText" style="text-align: center; width: 250px; background-color: darkcyan; color: white; font-style: italic; font-weight: bold;"></p> 
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-4" style="background-color:whitesmoke; margin-top: 20px;">
+                <div style="margin-top: 40px;"><b>How to play</b></div>
+                <hr>
+                Enter the text into the input fields and generate your custom meme!
+                <br>
+                <input type="text" id="firstInput">
+                <br>
+                <input type="text" id="secondInput">
+                <br>
+                <button type="button" onclick="generateText()">Generate</button>
+                <button type="reset" onclick="resetText()">Reset</button>
+            </div>
+        
         </div>
-    </div>
-</div>
-
-
+        
+        <script>
+            function generateText() {
+                var firstInputValue = document.getElementById("firstInput").value;
+                var secondInputValue = document.getElementById("secondInput").value;
+        
+                document.getElementById("noText").innerText = firstInputValue;
+                document.getElementById("yesText").innerText = secondInputValue;
+            }
+        
+            function resetText() {
+                document.getElementById("firstInput").value = '';
+                document.getElementById("secondInput").value = '';
+                document.getElementById("noText").innerText = '';
+                document.getElementById("yesText").innerText = '';
+            }
+        </script>
 
 
