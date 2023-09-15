@@ -11,7 +11,7 @@
     
   </head>
   <body>
-    <h1 style="background-color: black;" align="Right">
+    <h1 style="background-color: black; margin-bottom: 0;" align="Right">
     <a href="#" class="btn" style="color: white;">
       <i class="bi bi-person-circle"></i> Profile
   </a>
@@ -56,16 +56,13 @@
         <a class="nav-link disabled" href="#" style="color: white;">Maps</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="search.." aria-label="Search">
-      
+    
+    <form class="form-inline my-2 my-lg-0" style="display: flex;">
+        <input class="form-control mr-sm-2" type="search" placeholder="search.." aria-label="Search" style="width: auto; flex-grow: 1; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 0; border-bottom-right-radius: 0;">
+        <button class="btn0" type="submit" style="color: white; border: 1px solid grey;"><i class="bi bi-search" style="color: grey;"></i></button>
     </form>
     
     
-    
-    <form class="form-inline my-2 my-lg-0" style="background-color: grey;">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: white; border: 1px solid white;"><i class ="bi bi-search"></i></button>
-    </form>
   </div>
 </nav>
 
@@ -76,7 +73,7 @@
 
 <div class="row">
     
-    <div class = "col-2" style="margin-top: 110px;">
+    <div class = "col-2" style="margin-top: 95px;">
         <ul class="list-group">
             <li class="list-group-item" style="background-color:darkcyan; color: white;">Similar Games</li>
             <li class="list-group-item">Doodle</li>
@@ -86,7 +83,7 @@
         </ul>
         
         
-        <ul class="list-group" style="margin-top: 60px">
+        <ul class="list-group" style="margin-top: 30px">
             <li class="list-group-item" style="background-color:darkcyan; color: white;">Top Ranked</li>
             <li class="list-group-item">Sonic</li>
             <li class="list-group-item">Super Mario Bros</li>
@@ -95,7 +92,7 @@
     </div>
     
     
-    <div class="col-10" style="margin-top: 30px;">
+    <div class="col-10" style="margin-top: 20px;">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             
             
@@ -187,43 +184,100 @@
     <!-- Second Page -->
     
     <div class="row">
-        <div class="col-5 d-flex flex-column" style="margin-top: 100px; background-color: darkcyan; color: white; padding: 20px;">
-            <div class="mb-3">
-                <b>Gallery</b>
-            </div>
-            <img src="/A1/img/bowling.png" alt="Bowling" style= "width:100%; height:100%;">
+        <div class="col-5" style="margin-top: 100px; background-color: darkcyan; color: white; height: 545px;">
+            <b style="margin-left: 20px; margin-top: 60px; margin-bottom: 50px; font-size: 24px;">Gallery</b>
+            <img src="/A1/img/bowling.jpg" alt="bowling" style="width: 110%; height: 93.4%;">
         </div>
+      
         
-        <div class="col-4" style="margin-top: 100px; background-color: silver; color: white; padding: 20px;">
-            <p style="margin-top: 120px; color: darkcyan; font-size: 60px; font-family: 'cursive-font', cursive;">Explore more</p>
-            <p style="color: darkcyan; font-size: 60px; font-family: 'cursive-font', cursive;">offline</p>
+        <div class="col-4" style="padding-left: 30px; margin-top: 100px; background-color: silver; color: white; height: 545px;">
+            <p style="margin-top: 60px; color: darkcyan; font-size: 40px; font-family: 'cursive-font', cursive;">Explore more</p>
+            <p style="color: darkcyan; font-size: 40px; font-family: 'cursive-font', cursive;">offline</p>
             <hr>
             <p style="color:black;">Here's a glimpse!</p>
             <p style="color:darkcyan;">More..</p>
         </div>
         
         
-        <div class="col-3" style="margin-top: 100px; padding-left: 20px;">
-            <div class="Contact_Us" style="background-color: darkcyan; padding: 20px;">
-                <b>Contact Us</b>
+        <div class="col-3" style="margin-top: 100px; padding-left: 20px; height: auto;">
+
+            <div class="list-group" style="border: 2px solid whitesmoke;">
+                
+                <div class="list-group-item" style="background-color: darkcyan; color: white;">
+                    <b>Contact Us</b>
+                </div>
+                
+                <div class="list-group-item">
+                    <div class="row">
+                        <div class="col-3" style="background-color: silver;">
+                            <p style="text-align: center;">Name</p>
+                        </div>
+                        <div class="col-9">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="list-group-item">
+                    <div class="row">
+                        <div class="col-3" style="background-color: silver;">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <div class="col-9">
+                            <input type="email" class="form-control">
+                        </div>
+                    </div>
+                </div>
+        
+
+                <div class="list-group-item">
+                    <div class="row">
+                        <div class="col-3" style="background-color: silver;">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+                        <div class="col-9">
+                            <input type="tel" class="form-control">
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="list-group-item">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="..."></textarea>
+                </div>
+                
+                <div class="list-group-item">
+                    <button style="background-color: lightblue;" type="Submit" onclick="resetText()">Submit</button>
+                </div>
+        
             </div>
-            <ul class="list-group">
-                <li class="list-group-item">Name</li>
-                <li class="list-group-item"><i class="bi bi-envelope"></i></li>
-                <li class="list-group-item"><i class="bi bi-telephone-fill"></i></li>
-                <li class="list-group-item">...</li>
-                <button>Submit</button>
-                </ui>
-                <b>Follow us</b>
-            <div class="instagram" style="border: 1px solid white;">
-                <i class="bi bi-instagram"></i>
-                <b style="font-family: 'cursive-font', cursive;">ArcadeArena</b>
-            </div>
-            <div class="youtube" style= "border: 1px solid white;">
-                <i class="bi bi-youtube"></i>
-                <b style="font-family: 'cursive-font', cursive;">ArcadeArena</b>
+        
+
+            <div class="list-group" style="border: 2px solid whitesmoke; margin-top: 10px;">
+                <div class="list-group-item" style="background-color: darkcyan; color: white;">
+                    <b>Follow us</b>
+                </div>
+                
+
+                <div class="list-group-item">
+                    <div>
+                    <i class="bi bi-instagram"></i></div> 
+                    <b style="font-family: 'cursive-font', cursive;">ArcadeArena</b>
+                </div>
+                
+
+                <div class="list-group-item">
+                    <div>
+                    <i class="bi bi-youtube"></i> </div>
+                    <b style="font-family: 'cursive-font', cursive;">ArcadeArena</b>
+                </div>
             </div>
         </div>
-    </div>
+            
+
+
     
+
+    
+    
+
     
